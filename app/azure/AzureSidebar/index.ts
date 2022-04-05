@@ -1,1 +1,1 @@
-export { AzureSidebar, AzureSidebarAngular } from './AzureSidebar';
+export { AzureSidebar } from './AzureSidebar';

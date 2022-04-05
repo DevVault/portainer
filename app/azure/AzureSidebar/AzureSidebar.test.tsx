@@ -15,7 +15,7 @@ test('dashboard items should render correctly', () => {
     'fa-fw'
   );
 
-  const containerInstancesItem = getByLabelText('ContainerInstances');
+  const containerInstancesItem = getByLabelText(/Container Instances/i);
   expect(containerInstancesItem).toBeVisible();
   expect(containerInstancesItem).toHaveTextContent('Container instances');
 

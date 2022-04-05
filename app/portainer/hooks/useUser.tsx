@@ -50,14 +50,11 @@ export function useAuthorizations(
   adminOnlyCE = false
 ) {
   const { user } = useUser();
-  const { params } = useCurrentStateAndParams();
+  const {
+    params: { endpointId },
+  } = useCurrentStateAndParams();
 
   if (!user) {
-    return false;
-  }
-
-  const { endpointId } = params;
-  if (!endpointId) {
     return false;
   }
 
@@ -80,7 +77,7 @@ export function isEnvironmentAdmin(
 export function hasAuthorizations(
   user: User,
   authorizations: string | string[],
-  environmentId: EnvironmentId,
+  environmentId?: EnvironmentId,
   adminOnlyCE = false
 ) {
   const authorizationsArray =
@@ -88,6 +85,10 @@ export function hasAuthorizations(
 
   if (process.env.PORTAINER_EDITION === 'CE') {
     return !adminOnlyCE || isAdmin(user);
+  }
+
+  if (!environmentId) {
+    return false;
   }
 
   if (isAdmin(user)) {

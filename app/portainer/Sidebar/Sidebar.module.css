@@ -3,8 +3,6 @@
 }
 
 .root {
-  background: var(--bg-sidebar-wrapper-color);
-
   margin-left: -150px;
   left: -30px;
   width: 250px;
@@ -15,6 +13,25 @@
 
   display: flex;
   flex-flow: column;
+}
+
+.root {
+  background-color: var(--blue-5);
+}
+:global(:root[theme='dark']) .root {
+  background-color: var(--grey-1);
+}
+:global(:root[theme='highcontrast']) .root {
+  background-color: var(--black-color);
+}
+:global(:root[data-edition='BE']) .root {
+  background-color: var(--grey-5);
+}
+:global(:root[data-edition='BE'][theme='dark']) .root {
+  background-color: var(--grey-1);
+}
+:global(:root[data-edition='BE'][theme='highcontrast']) .root {
+  background-color: var(--black-color);
 }
 
 ul.sidebar {

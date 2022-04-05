@@ -1,8 +1,6 @@
 .sidebar-menu-item a {
   text-indent: 25px;
 
-  color: var(--text-sidebar-list-color);
-
   padding-left: 5px;
   border-left: 3px solid transparent;
   font-size: 14px;
@@ -17,6 +15,25 @@
   width: 250px;
 }
 
+.sidebar-menu-item a {
+  color: var(--grey-56);
+}
+:global(:root[theme='dark']) .sidebar-menu-item a {
+  color: var(--white-color);
+}
+:global(:root[theme='highcontrast']) .sidebar-menu-item a {
+  color: var(--white-color);
+}
+:global(:root[data-edition='BE']) .sidebar-menu-item a {
+  color: var(--white-color);
+}
+:global(:root[data-edition='BE'][theme='dark']) .sidebar-menu-item a {
+  color: var(--white-color);
+}
+:global(:root[data-edition='BE'][theme='highcontrast']) .sidebar-menu-item a {
+  color: var(--white-color);
+}
+
 a.active .menu-icon {
   text-indent: 25px;
 }
@@ -24,7 +41,30 @@ a.active .menu-icon {
 a.active {
   color: #fff;
   border-left-color: var(--border-sidebar-color);
-  background: var(--bg-sidebar-color);
+}
+
+a.active {
+  background: var(--grey-37);
+}
+
+:global(:root[theme='dark']) a.active {
+  background-color: var(--grey-3);
+}
+
+:global(:root[theme='highcontrast']) a.active {
+  background-color: var(--black-color);
+}
+
+:global(:root[data-edition='BE']) a.active {
+  background-color: var(--grey-5);
+}
+
+:global(:root[data-edition='BE'][theme='dark']) a.active {
+  background-color: var(--grey-1);
+}
+
+:global(:root[data-edition='BE'][theme='highcontrast']) a.active {
+  background-color: var(--black-color);
 }
 
 .menu-icon {

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { UISrefActive } from '@uirouter/react';
 
 import { Link } from '@/portainer/components/Link';
+import { TestProps } from '@/types';
 
 import styles from './SidebarMenuItem.module.css';
 
@@ -23,15 +24,16 @@ export function SidebarMenuItemWrapper({
   ident,
   className,
   children,
-  ...ariaProps
-}: PropsWithChildren<WrapperProps> & AriaAttributes) {
+  ...props
+}: PropsWithChildren<WrapperProps> & AriaAttributes & TestProps) {
   return (
     <li
       className={clsx(styles.sidebarMenuItem, className, {
         [styles.ident]: ident,
       })}
+      // disabling to pass aria and test props
       // eslint-disable-next-line react/jsx-props-no-spreading
-      {...ariaProps}
+      {...props}
     >
       {children}
     </li>

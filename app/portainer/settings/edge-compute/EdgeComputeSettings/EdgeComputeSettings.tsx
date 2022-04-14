@@ -6,7 +6,6 @@ import { Widget, WidgetBody, WidgetTitle } from '@/portainer/components/widget';
 import { LoadingButton } from '@/portainer/components/Button/LoadingButton';
 import { TextTip } from '@/portainer/components/Tip/TextTip';
 import { Input } from '@/portainer/components/form-components/Input';
-import { baseHref } from '@/portainer/helpers/pathHelper';
 import { EdgeCheckinIntervalField } from '@/edge/components/EdgeCheckInIntervalField';
 import { FormSectionTitle } from '@/portainer/components/form-components/FormSectionTitle';
 
@@ -28,7 +27,7 @@ interface Props {
   onSubmit(values: FormValues): void;
 }
 
-export function SettingsEdgeCompute({ settings, onSubmit }: Props) {
+export function EdgeComputeSettings({ settings, onSubmit }: Props) {
   if (!settings) {
     return null;
   }
@@ -140,9 +139,4 @@ export function SettingsEdgeCompute({ settings, onSubmit }: Props) {
       </Widget>
     </div>
   );
-}
-
-function buildDefaultUrl() {
-  const base = baseHref();
-  return window.location.origin + (base !== '/' ? base : '');
 }

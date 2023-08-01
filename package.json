@@ -203,7 +203,7 @@
     "react-test-renderer": "^17.0.2",
     "source-map-loader": "^3.0.0",
     "speed-measure-webpack-plugin": "^1.5.0",
-    "storybook": "^7.0.18",
+    "storybook": "^7.2.0",
     "storybook-css-modules-preset": "^1.1.1",
     "style-loader": "^3.3.3",
     "swagger2openapi": "^7.0.8",

@@ -137,7 +137,7 @@
     "@babel/preset-typescript": "^7.23.0",
     "@simbathesailor/use-what-changed": "^2.0.0",
     "@storybook/addon-actions": "^7.0.18",
-    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-essentials": "^8.2.0",
     "@storybook/addon-links": "^7.0.18",
     "@storybook/addon-styling": "^1.0.8",
     "@storybook/react": "^7.0.18",

@@ -141,7 +141,7 @@
     "@storybook/addon-links": "^7.0.18",
     "@storybook/addon-styling": "^1.0.8",
     "@storybook/react": "^7.0.18",
-    "@storybook/react-webpack5": "^7.0.18",
+    "@storybook/react-webpack5": "^8.4.0",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^9.3.4",
     "@testing-library/react": "^12",
